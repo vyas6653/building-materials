@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.form-container {
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+  width: 350px;
+  margin: 100px auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.form-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #00e6ff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="email"],
+.form-container input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 15px;
+}
+
+.form-container input::placeholder {
+  color: #ccc;
+}
+
+.form-container button {
+  background: linear-gradient(90deg, #0078ff, #00e6ff);
+  border: none;
+  color: #fff;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.form-container button:hover {
+  background: linear-gradient(90deg, #00e6ff, #0078ff);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+.form-container a {
+  color: #00e6ff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+
+/* LOGIN PAGE — Futuristic neon blue */
+.login-page {
+  background-image: url('images/auth-bg-login.jpeg');
+}
+
+.login-page .form-container {
+  box-shadow: 0 0 30px rgba(0, 180, 255, 0.4);
+}
+
+/* REGISTER PAGE — Metallic blue arrows */
+.register-page {
+  background-image: url('images/auth-bg-register.jpeg');
+}
+
+.register-page .form-container {
+  box-shadow: 0 0 30px rgba(0, 120, 255, 0.5);
+}
+/* ✅ Unique backgrounds for each page */
+body.register-page {
+  background: url("images/auth-bg-register.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.login-page {
+  background: url("images/auth-bg-login.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.verify-page {
+  background: url("images/auth-bg-verify.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.logout-page {
+  background: url("images/auth-bg-logout.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  body {
+    background-position: center;
+    background-attachment: scroll;
+  }
+
+  .form-container {
+    width: 90%;
+    padding: 25px 20px;
+  }
+
+  .form-container h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .form-container input, .form-container button {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* 🔔 Toast message styling (bottom-right corner) */
+#toast {
+  visibility: hidden;
+  min-width: 220px;
+  background-color: #4CAF50;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 12px;
+  position: fixed;
+  bottom: 20px;       
+  right: 20px;        
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease, bottom 0.5s ease;
+}
+
+#toast.show {
+  visibility: visible;
+  opacity: 1;
+  bottom: 30px;       
+}
